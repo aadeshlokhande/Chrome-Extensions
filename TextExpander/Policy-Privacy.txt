@@ -1,0 +1,65 @@
+TextExpander Privacy Policy
+
+Last Updated: September 12, 2026
+
+TextExpander is a Chrome extension designed to help users save time by automatically expanding user-defined shortcuts into full phrases.
+
+1. Information We Collect
+
+TextExpander does not collect or transmit personal information to external servers.
+
+The extension processes text entered into webpage input fields, textareas, and contenteditable areas only to detect user-defined shortcuts and replace them with their corresponding phrases.
+
+2. Shortcut Data
+
+TextExpander stores user-created shortcuts and their corresponding phrases locally in the user's browser using Chrome's local storage.
+
+For example:
+
+brb → Be right back
+
+This shortcut data is stored locally on the user's device and is not uploaded to or stored on external servers.
+
+3. Website Content
+
+TextExpander requires access to webpage text input areas so that it can detect shortcuts and perform text expansion.
+
+Text entered by the user is processed locally within the browser for the sole purpose of providing the text expansion functionality.
+
+TextExpander does not intentionally collect, store, or transmit the user's typed content to external servers.
+
+4. Data Sharing
+
+TextExpander does not sell, rent, or share user data with third parties.
+
+The extension does not send shortcut data or typed text to external servers.
+
+5. Data Security
+
+Shortcut data is stored locally using Chrome Storage. TextExpander does not maintain a remote database containing users' shortcut information.
+
+6. Analytics and Tracking
+
+TextExpander does not use third-party analytics services, advertising trackers, or tracking technologies to monitor users.
+
+7. User Control
+
+Users can create, view, edit, search, and delete their saved shortcuts through the TextExpander management page.
+
+Users can also remove the TextExpander extension from Chrome at any time.
+
+8. Children's Privacy
+
+TextExpander does not knowingly collect personal information from children or other users.
+
+9. Changes to This Privacy Policy
+
+This Privacy Policy may be updated from time to time to reflect changes to the extension or applicable requirements.
+
+Any updated version of this Privacy Policy will be published on this page.
+
+10. Contact
+
+If you have any questions or concerns regarding this Privacy Policy or TextExpander, please contact the developer through the contact information provided on the Chrome Web Store listing.
+
+© 2026 TextExpander. All rights reserved.

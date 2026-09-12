@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 360px;
+    min-height: 420px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+.container {
+    padding: 18px;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 18px;
+}
+
+.header h1 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.header p {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* Status */
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 9px;
+    border-radius: 20px;
+    background: #ecfdf5;
+    color: #059669;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #10b981;
+}
+
+/* Stats */
+
+.stats {
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+.stat-label {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.stat-card strong {
+    font-size: 22px;
+    color: #111827;
+}
+
+/* Section */
+
+.shortcut-section {
+    margin-bottom: 18px;
+}
+
+.section-header {
+    margin-bottom: 10px;
+}
+
+.section-header h2 {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* Shortcut List */
+
+.shortcut-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.shortcut-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 11px 12px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+}
+
+.shortcut-key {
+    min-width: 65px;
+    max-width: 90px;
+    padding: 5px 8px;
+    background: #eef2ff;
+    color: #4f46e5;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.shortcut-arrow {
+    color: #9ca3af;
+    font-size: 12px;
+}
+
+.shortcut-value {
+    flex: 1;
+    font-size: 12px;
+    color: #374151;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Empty State */
+
+.empty-state {
+    display: none;
+    padding: 25px 15px;
+    text-align: center;
+    background: #ffffff;
+    border: 1px dashed #d1d5db;
+    border-radius: 12px;
+}
+
+.empty-icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.empty-state h3 {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.empty-state p {
+    font-size: 11px;
+    line-height: 1.5;
+    color: #6b7280;
+}
+
+/* Manage Button */
+
+.manage-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 15px;
+    border: none;
+    border-radius: 10px;
+    background: #4f46e5;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.manage-button:hover {
+    background: #4338ca;
+}
+
+.manage-button span {
+    font-size: 17px;
+}
+
+/* Footer */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid #e5e7eb;
+    font-size: 10px;
+    color: #9ca3af;
+}

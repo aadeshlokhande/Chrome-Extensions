@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TextExpander - Manage Shortcuts</title>
+
+    <link rel="stylesheet" href="options.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- Header -->
+        <header class="page-header">
+
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">⌨</div>
+
+                    <div>
+                        <h1>TextExpander</h1>
+                        <p>Manage your shortcuts</p>
+                    </div>
+                </div>
+
+                <div class="active-status">
+                    <span class="status-dot"></span>
+                    <span>Always Active</span>
+                </div>
+            </div>
+
+        </header>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Toolbar -->
+            <section class="toolbar">
+
+                <div class="search-container">
+                    <span class="search-icon">⌕</span>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search shortcuts..."
+                        autocomplete="off"
+                    >
+                </div>
+
+                <button
+                    type="button"
+                    id="addShortcutButton"
+                    class="add-button"
+                >
+                    <span>+</span>
+                    Add Shortcut
+                </button>
+
+            </section>
+
+
+            <!-- Shortcut Stats -->
+            <section class="stats-container">
+
+                <div class="stat-card">
+                    <span>Total Shortcuts</span>
+                    <strong id="totalShortcuts">0</strong>
+                </div>
+
+                <div class="stat-card">
+                    <span>Active</span>
+                    <strong id="activeShortcuts">0</strong>
+                </div>
+
+            </section>
+
+
+            <!-- Shortcut Table -->
+            <section class="shortcut-container">
+
+                <div class="table-header">
+                    <div>Shortcut</div>
+                    <div>Expanded Phrase</div>
+                    <div>Actions</div>
+                </div>
+
+                <div id="shortcutTableBody">
+                    <!-- Shortcut rows will be generated using options.js -->
+                </div>
+
+
+                <!-- Empty State -->
+                <div
+                    id="emptyState"
+                    class="empty-state"
+                >
+                    <div class="empty-icon">⌨️</div>
+
+                    <h2>No shortcuts found</h2>
+
+                    <p>
+                        Create your first shortcut to start
+                        expanding text automatically.
+                    </p>
+
+                    <button
+                        type="button"
+                        id="emptyAddButton"
+                        class="empty-add-button"
+                    >
+                        + Add Shortcut
+                    </button>
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- Add/Edit Modal -->
+        <div
+            id="shortcutModal"
+            class="modal-overlay"
+            aria-hidden="true"
+        >
+
+            <div
+                class="modal"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="modalTitle"
+            >
+
+                <div class="modal-header">
+
+                    <div>
+                        <h2 id="modalTitle">Add Shortcut</h2>
+
+                        <p>
+                            Create a short form and its full phrase.
+                        </p>
+                    </div>
+
+                    <button
+                        type="button"
+                        id="closeModalButton"
+                        class="close-button"
+                        aria-label="Close"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+
+                <form id="shortcutForm">
+
+                    <!-- Shortcut -->
+                    <div class="form-group">
+
+                        <label for="shortcutInput">
+                            Shortcut
+                        </label>
+
+                        <input
+                            type="text"
+                            id="shortcutInput"
+                            placeholder="Example: brb"
+                            autocomplete="off"
+                            required
+                        >
+
+                        <small>
+                            Enter the short form you want to type.
+                        </small>
+
+                    </div>
+
+
+                    <!-- Full Phrase -->
+                    <div class="form-group">
+
+                        <label for="phraseInput">
+                            Expanded Phrase
+                        </label>
+
+                        <textarea
+                            id="phraseInput"
+                            placeholder="Example: Be right back"
+                            rows="4"
+                            required
+                        ></textarea>
+
+                        <small>
+                            This phrase will replace the shortcut.
+                        </small>
+
+                    </div>
+
+
+                    <!-- Error -->
+                    <div
+                        id="formError"
+                        class="form-error"
+                    ></div>
+
+
+                    <!-- Buttons -->
+                    <div class="form-actions">
+
+                        <button
+                            type="button"
+                            id="cancelButton"
+                            class="cancel-button"
+                        >
+                            Cancel
+                        </button>
+
+                        <button
+                            type="submit"
+                            id="saveButton"
+                            class="save-button"
+                        >
+                            Save Shortcut
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+        <!-- Delete Confirmation Modal -->
+        <div
+            id="deleteModal"
+            class="modal-overlay"
+            aria-hidden="true"
+        >
+
+            <div class="modal delete-modal">
+
+                <div class="delete-icon">🗑️</div>
+
+                <h2>Delete Shortcut?</h2>
+
+                <p>
+                    Are you sure you want to delete
+                    <strong id="deleteShortcutName"></strong>?
+                </p>
+
+                <div class="form-actions">
+
+                    <button
+                        type="button"
+                        id="cancelDeleteButton"
+                        class="cancel-button"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="button"
+                        id="confirmDeleteButton"
+                        class="delete-button"
+                    >
+                        Delete
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Toast Notification -->
+        <div
+            id="toast"
+            class="toast"
+            role="status"
+        ></div>
+
+    </div>
+
+
+    <script src="options.js"></script>
+
+</body>
+
+</html>

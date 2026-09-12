@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TextExpander</title>
+
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header class="header">
+            <div>
+                <h1>TextExpander</h1>
+                <p>Expand your shortcuts instantly</p>
+            </div>
+
+            <div class="status">
+                <span class="status-dot"></span>
+                <span>Active</span>
+            </div>
+        </header>
+
+        <!-- Shortcut Count -->
+        <div class="stats">
+            <div class="stat-card">
+                <span class="stat-label">Shortcuts</span>
+                <strong id="shortcutCount">0</strong>
+            </div>
+        </div>
+
+        <!-- Shortcut List -->
+        <section class="shortcut-section">
+
+            <div class="section-header">
+                <h2>Recent Shortcuts</h2>
+            </div>
+
+            <div id="shortcutList" class="shortcut-list">
+                <!-- Shortcuts will be loaded using popup.js -->
+            </div>
+
+            <div id="emptyState" class="empty-state">
+                <div class="empty-icon">⌨️</div>
+                <h3>No shortcuts yet</h3>
+                <p>Add your first shortcut to start expanding text.</p>
+            </div>
+
+        </section>
+
+        <!-- Manage Button -->
+        <button id="manageButton" class="manage-button">
+            Manage Shortcuts
+            <span>→</span>
+        </button>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <span>TextExpander</span>
+            <span>v1.0.0</span>
+        </footer>
+
+    </div>
+
+    <script src="popup.js"></script>
+
+</body>
+</html>
